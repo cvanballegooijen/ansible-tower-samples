@@ -3,7 +3,7 @@
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World!"
+        msg: "Ansible version $ANSIBLE_TOWER!"
     - name: Set a Jenkins variable
       debug:
         msg: "JENKINS_EXPORT ANSIBLE_TOWER=3.4.2"
