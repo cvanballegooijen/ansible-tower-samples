@@ -1,9 +1,11 @@
 - name: Hello World Sample
   hosts: all
+  vars:
+     jenkins_version: "{{ lookup('env','ANSIBLE_TOWER') }}"
   tasks:
     - name: Hello Message
       debug:
-        msg: "Ansible version $ANSIBLE_TOWER!"
+        msg: "Ansible version: {{jenkins_version}}!"
     - name: Set a Jenkins variable
       debug:
         msg: "JENKINS_EXPORT ANSIBLE_TOWER=3.4.2"
