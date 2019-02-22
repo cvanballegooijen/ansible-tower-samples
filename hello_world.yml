@@ -4,3 +4,6 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+    - name: Set a Jenkins variable
+      debug:
+        msg: "JENKINS_EXPORT ANSIBLE_TOWER=3.4.2"
